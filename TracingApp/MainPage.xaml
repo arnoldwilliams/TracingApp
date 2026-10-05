@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:TracingApp.Controls"
+             x:Class="TracingApp.MainPage"
+             Title="Kids Tracing"
+             BackgroundColor="{StaticResource PageBackground}">
+
+    <Grid RowDefinitions="Auto,*,Auto" Padding="16" RowSpacing="12">
+
+        <VerticalStackLayout Grid.Row="0" Spacing="4">
+            <Label Text="Trace the picture!"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   TextColor="{StaticResource TextPrimary}"
+                   HorizontalOptions="Center" />
+            <Label x:Name="TemplateLabel"
+                   FontSize="16"
+                   TextColor="{StaticResource TextPrimary}"
+                   HorizontalOptions="Center" />
+        </VerticalStackLayout>
+
+        <Border Grid.Row="1"
+                BackgroundColor="{StaticResource CardBackground}"
+                Stroke="{StaticResource CardBorder}"
+                StrokeThickness="2"
+                Padding="0">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="18" />
+            </Border.StrokeShape>
+            <Grid>
+                <Image x:Name="TemplateImage"
+                       Aspect="AspectFit"
+                       Margin="10" />
+                <controls:TracingCanvasView x:Name="TracingCanvas" />
+            </Grid>
+        </Border>
+
+        <VerticalStackLayout Grid.Row="2" Spacing="12">
+            <HorizontalStackLayout Spacing="12" HorizontalOptions="Center">
+                <Button x:Name="UndoButton" Text="Undo" Clicked="OnUndoClicked" IsEnabled="False" />
+                <Button x:Name="ClearButton" Text="Clear" Clicked="OnClearClicked" IsEnabled="False" />
+                <Button Text="Next picture" Clicked="OnNextClicked" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>
