@@ -8,27 +8,39 @@ public partial class MainPage : ContentPage
     [
         new TracingTemplate
         {
-            Name = "Circle",
-            ImageSource = "template_circle.png",
-            Description = "Trace the big circle.",
+            Name = "Bee",
+            ImageSource = "template_bee.png",
+            Description = "Draw a bee.",
         },
         new TracingTemplate
         {
-            Name = "Star",
-            ImageSource = "template_star.png",
-            Description = "Trace the star.",
+            Name = "Butterfly",
+            ImageSource = "template_butterfly.png",
+            Description = "Draw a butterfly.",
         },
         new TracingTemplate
         {
-            Name = "House",
-            ImageSource = "template_house.png",
-            Description = "Trace the house.",
+            Name = "Caterpillar",
+            ImageSource = "template_caterpillar.png",
+            Description = "Draw a caterpillar.",
         },
         new TracingTemplate
         {
-            Name = "Number 1",
-            ImageSource = "template_number1.png",
-            Description = "Trace the number 1.",
+            Name = "Ladybird",
+            ImageSource = "template_ladybird.png",
+            Description = "Draw a ladybird.",
+        },
+        new TracingTemplate
+        {
+            Name = "Snail",
+            ImageSource = "template_snail.png",
+            Description = "Draw a snail.",
+        },
+        new TracingTemplate
+        {
+            Name = "Worm",
+            ImageSource = "template_worm.png",
+            Description = "Draw a worm.",
         },
     ];
 
